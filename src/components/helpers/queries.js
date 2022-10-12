@@ -1,5 +1,5 @@
 const URL = process.env.REACT_APP_API_CAFECITO;
-
+//peticion GET (para recibir informacion)
 export const consultarAPI = async () => {
     try {
         const respuesta = await fetch(URL);
@@ -10,3 +10,10 @@ export const consultarAPI = async () => {
         return false;
     }
 };
+
+//peticion POST (para agregar un producto al servidor)
+
+
+//peticion PUT (para Editar)
+
+//peticion DELETE (para borrar)
