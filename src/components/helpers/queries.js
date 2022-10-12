@@ -11,8 +11,7 @@ export const consultarAPI = async () => {
     }
 };
 
-//peticion POST (para agregar un producto al servidor)
-
+//peticion POST (para agregar un producto al servidor)// en el login tambien se usa para enviar datos
 
 //peticion PUT (para Editar)
 

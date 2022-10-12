@@ -8,7 +8,7 @@ const CrearProducto = () => {
         formState: { errors },
     } = useForm();
 
-    const onSubmit = (dataProducto) => {
+    const onSubmitCrear = (dataProducto) => {
         console.log(dataProducto);
         console.log("prueba desde submit");
         //una vez todo validado enviamos la peticion a la API
@@ -22,7 +22,7 @@ const CrearProducto = () => {
                     <hr />
                 </section>
                 <section className="container my-3">
-                    <Form onSubmit={handleSubmit(onSubmit)} noValidate>
+                    <Form onSubmit={handleSubmit(onSubmitCrear)} noValidate>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Nombre producto*</Form.Label>
                             <Form.Control
