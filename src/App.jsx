@@ -9,8 +9,8 @@ import Footer from "./components/common/Footer";
 import DetalleProducto from "./components/views/producto/DetalleProducto";
 import CrearProducto from "./components/views/producto/CrearProducto";
 import EditarProducto from "./components/views/producto/EditarProducto";
-import Login from "./components/common/Login";
-import Registro from "./components/common/Registro";
+import Login from "./components/views/Login";
+import Registro from "./components/views/Registro";
 function App() {
     return (
         //administrar las rutas;
