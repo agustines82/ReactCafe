@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Card, Badge } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import { obtenerProductoAPI, consultarAPI } from "../../helpers/queries";
+import { obtenerProductoAPI } from "../../helpers/queries";
 const DetalleProducto = () => {
     const { id } = useParams();
     const [producto, setProducto] = useState({});
