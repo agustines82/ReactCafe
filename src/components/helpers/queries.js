@@ -19,7 +19,7 @@ export const crearProductoAPI = async (producto) => {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(producto)            
+            body: JSON.stringify(producto),
         });
         return respuesta;
     } catch (error) {
@@ -31,3 +31,14 @@ export const crearProductoAPI = async (producto) => {
 //peticion PUT (para Editar)
 
 //peticion DELETE (para borrar)
+export const borrarProductoAPI = async (id) => {
+    try {
+        const respuesta = await fetch(URL + "/" + id, {
+            method: "DELETE",
+        });
+        return respuesta;
+    } catch (error) {
+        console.log(error);
+        return false;
+    }
+};
