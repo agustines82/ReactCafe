@@ -27,6 +27,34 @@
       "categoria": "Dulce",
       "imagen": "https://images.pexels.com/photos/887853/pexels-photo-887853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "id": 4
+    },
+    {
+      "nombreProducto": "medialuna",
+      "precio": "50",
+      "imagen": "https://media.istockphoto.com/photos/fresh-baked-croissant-on-white-background-picture-id175447414?s=612x612",
+      "categoria": "Dulce",
+      "id": 5
+    },
+    {
+      "nombreProducto": "Torta de coco",
+      "precio": "60",
+      "imagen": "https://images.pexels.com/photos/2451673/pexels-photo-2451673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "categoria": "Dulce",
+      "id": 6
+    },
+    {
+      "nombreProducto": "tostado de jamón y queso",
+      "precio": "100",
+      "imagen": "https://media.istockphoto.com/photos/cheese-and-ham-panini-sandwiches-on-a-wooden-board-picture-id155352902?s=612x612",
+      "categoria": "Salado",
+      "id": 7
+    },
+    {
+      "nombreProducto": "Lemon pai",
+      "precio": "80",
+      "imagen": "https://media.istockphoto.com/photos/lemon-cake-picture-id95019434?s=612x612",
+      "categoria": "Dulce",
+      "id": 8
     }
   ]
 }
