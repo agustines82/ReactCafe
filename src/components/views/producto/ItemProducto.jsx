@@ -7,17 +7,28 @@ const ItemProducto = ({ producto, setProductos }) => {
     const { id, nombreProducto, precio, imagen, categoria } = { ...producto };
 
     const borrarProducto = () => {
-        //tarea: agregar con sweat alert si esta seguro de eliminar el producto: si=>logica ya hecha no?=>nada
-
-        borrarProductoAPI(id).then((respuesta) => {
-            if (respuesta.status === 200) {
-                Swal.fire("Producto Eliminado", "El producto se eliminó correctamente", "success");
-                //busco todos los productos en ese instante de tiempo luego de borrado el producto y actualizo el state productos de administrador
-                consultarAPI().then((response) => {
-                    setProductos(response);
+        Swal.fire({
+            title: "Estas seguro de eliminar el producto?",
+            text: "No podrás revertir esta acción!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Eliminar",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                borrarProductoAPI(id).then((respuesta) => {
+                    if (respuesta.status === 200) {
+                        Swal.fire("Producto Eliminado", "El producto se eliminó correctamente", "success");
+                        //busco todos los productos en ese instante de tiempo luego de borrado el producto y actualizo el state productos de administrador
+                        consultarAPI().then((response) => {
+                            setProductos(response);
+                        });
+                    } else {
+                        Swal.fire("Ocurrio un error", "Intente esta operación en unos minutos", "error");
+                    }
                 });
-            } else {
-                Swal.fire("Ocurrio un error", "Intente esta operación en unos minutos", "error");
+                Swal.fire("Producto Eliminado!", "El producto fue borrado de la lista.", "success");
             }
         });
     };
@@ -31,7 +42,7 @@ const ItemProducto = ({ producto, setProductos }) => {
                 <td>{imagen}</td>
                 <td>{categoria}</td>
                 <td className="text-center">
-                    <Link className="btn btn-outline-light me-1" to={`/administrar/editar/:id`}>
+                    <Link className="btn btn-outline-light me-1" to={`/administrar/editar/${id}`}>
                         <i className="bi bi-arrow-clockwise text-warning"></i>
                     </Link>
                     <Button variant="outline-light" onClick={borrarProducto}>

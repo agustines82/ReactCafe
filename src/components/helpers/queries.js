@@ -28,8 +28,6 @@ export const crearProductoAPI = async (producto) => {
     }
 };
 
-//peticion PUT (para Editar)
-
 //peticion DELETE (para borrar)
 export const borrarProductoAPI = async (id) => {
     try {
@@ -37,6 +35,21 @@ export const borrarProductoAPI = async (id) => {
             method: "DELETE",
         });
         return respuesta;
+    } catch (error) {
+        console.log(error);
+        return false;
+    }
+};
+
+//peticion PUT (para Editar)
+export const obtenerProductoAPI = async (id) => {
+    try {
+        const respuesta = await fetch(URL + "/" + id);
+        const producto = {
+            dato: await respuesta.json(),
+            status: respuesta.status,
+        };
+        return producto;
     } catch (error) {
         console.log(error);
         return false;

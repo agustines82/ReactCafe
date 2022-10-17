@@ -8,25 +8,11 @@
       "id": 1
     },
     {
-      "nombreProducto": "brownie",
-      "precio": 250,
-      "categoria": "Dulce",
-      "imagen": "https://images.pexels.com/photos/887853/pexels-photo-887853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "id": 2
-    },
-    {
       "nombreProducto": "te",
       "precio": 150,
       "categoria": "Bebida caliente",
       "imagen": "https://images.pexels.com/photos/230477/pexels-photo-230477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "id": 3
-    },
-    {
-      "nombreProducto": "Torta de coco",
-      "precio": "60",
-      "imagen": "https://images.pexels.com/photos/2451673/pexels-photo-2451673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "categoria": "Dulce",
-      "id": 6
     },
     {
       "nombreProducto": "tostado de jamón y queso",
