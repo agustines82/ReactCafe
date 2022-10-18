@@ -12,8 +12,6 @@ const Registro = () => {
     } = useForm();
 
     const onSubmitRegistro = (dataRegistro) => {
-        console.log(dataRegistro);
-        console.log("prueba desde submit Registro");
         //una vez todo validado enviamos la peticion a la API
         crearUsuarioAPI(dataRegistro).then((respuesta) => {
             if (respuesta.status === 201) {

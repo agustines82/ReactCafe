@@ -1,4 +1,5 @@
 const URL = process.env.REACT_APP_API_CAFECITO;
+const URLU = process.env.REACT_APP_API_USUARIOS;
 //peticion GET (para recibir informacion)
 export const consultarAPI = async () => {
     try {
@@ -56,10 +57,10 @@ export const obtenerProductoAPI = async (id) => {
     }
 };
 
-//peticion POST (para agregar un usuario al servidor)//
+//peticion POST (para agregar un USUARIO al servidor)//
 export const crearUsuarioAPI = async (usuario) => {
     try {
-        const respuesta = await fetch(URL, {
+        const respuesta = await fetch(URLU, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

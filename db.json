@@ -36,5 +36,13 @@
       "id": 9
     }
   ],
-  "usuarios": []
+  "usuarios": [
+    {
+      "nombre": "Agustin",
+      "apellido": "Sampayo",
+      "email": "agustines82@gmail.com",
+      "password": "AA&ss1234",
+      "id": 2
+    }
+  ]
 }
