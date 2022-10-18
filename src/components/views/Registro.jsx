@@ -1,17 +1,29 @@
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import { crearUsuarioAPI } from "../helpers/queries";
 
 const Registro = () => {
     const {
         register,
         handleSubmit,
         formState: { errors },
+        reset,
     } = useForm();
 
     const onSubmitRegistro = (dataRegistro) => {
         console.log(dataRegistro);
         console.log("prueba desde submit Registro");
         //una vez todo validado enviamos la peticion a la API
+        crearUsuarioAPI(dataRegistro).then((respuesta) => {
+            if (respuesta.status === 201) {
+                Swal.fire("Usuario creado", "El Usuario fue registrado correctamente", "success");
+            } else {
+                Swal.fire("Ocurrio un error", "Intente esta operación en unos minutos", "error");
+            }
+        });
+        //reseteo el formulario
+        reset();
     };
     return (
         <Container className="mainSection my-3">

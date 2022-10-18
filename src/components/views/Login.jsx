@@ -1,16 +1,23 @@
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
     const {
         register,
         handleSubmit,
         formState: { errors },
+        reset,
     } = useForm();
 
+    const navegacion = useNavigate();
     const onSubmitLogin = (dataLogin) => {
         console.log(dataLogin);
         console.log("prueba desde submit login");
         //una vez todo validado enviamos la peticion a la API
+        //reseteo el formulario
+        reset();
+        //redirecciono al usuario a la pagina de Inicio
+        navegacion("/");
     };
     return (
         <Container className="mainSection my-3">
