@@ -5,7 +5,7 @@ const CardProducto = ({ producto }) => {
         <>
             <Col className="my-3">
                 <Card className="anchoCardProducto">
-                    <Card.Img variant="top" src={producto.imagen} />
+                    <Card.Img className="altoCardImageProducto" variant="top" src={producto.imagen} />
                     <Card.Body>
                         <Card.Title>{producto.nombreProducto}</Card.Title>
                         <Card.Text>Precio: ${producto.precio}</Card.Text>
