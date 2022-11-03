@@ -22,7 +22,7 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
                                 Inicio
                             </Nav.Link>
                             {/* fijate en la propiedad del local storage */}
-                            {usuarioLogueado.usuario ? (
+                            {usuarioLogueado.email ? (
                                 <>
                                     <NavLink to="/administrar" className={"nav-item nav-link"}>
                                         Aministrador

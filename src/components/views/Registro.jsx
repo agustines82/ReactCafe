@@ -1,10 +1,11 @@
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { crearUsuarioAPI } from "../helpers/queries";
 
 const Registro = ({ setUsuarioLogueado }) => {
+    const navigate = useNavigate();
     const {
         register,
         handleSubmit,
@@ -21,12 +22,12 @@ const Registro = ({ setUsuarioLogueado }) => {
                 Swal.fire("Ocurrio un error", "Intente esta operación en unos minutos", "error");
             }
         });
-        //guardar sesion een el local storage
+        //guardar sesion en el local storage
         localStorage.setItem("tokenUsuario", JSON.stringify(dataRegistro));
         //actualizar state (me falta traer el props)
         setUsuarioLogueado(dataRegistro);
         //redirecciono
-        Navigate("/administrar");
+        navigate("/administrar");
         //reseteo el formulario
         reset();
     };

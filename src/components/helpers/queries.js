@@ -86,7 +86,7 @@ export const crearUsuarioAPI = async (usuario) => {
         return respuesta;
     } catch (error) {
         console.log(error);
-        return false;
+        return;
     }
 };
 
