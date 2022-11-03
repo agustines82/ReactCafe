@@ -43,6 +43,13 @@
       "email": "agustines82@gmail.com",
       "password": "AA&ss1234",
       "id": 2
+    },
+    {
+      "nombre": "Ricardo",
+      "apellido": "Mora",
+      "email": "ricardomora@gmail.com",
+      "password": "Rm&123456",
+      "id": 3
     }
   ]
 }

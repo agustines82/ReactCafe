@@ -11,11 +11,15 @@ import CrearProducto from "./components/views/producto/CrearProducto";
 import EditarProducto from "./components/views/producto/EditarProducto";
 import Login from "./components/views/Login";
 import Registro from "./components/views/Registro";
+import { useState } from "react";
 function App() {
+    const usuario = JSON.parse(localStorage.getItem("tokenUsuario")) || {};
+    const [usuarioLogueado, setUsuarioLogueado] = useState(usuario);
+
     return (
         //administrar las rutas;
         <BrowserRouter>
-            <Menu />
+            <Menu usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado} />
             <Routes>
                 {/* dominio + path */}
                 <Route exact path="/" element={<Inicio />} />
@@ -25,7 +29,7 @@ function App() {
                 <Route exact path="/administrar/crear" element={<CrearProducto />} />
                 <Route exact path="/administrar/editar/:id" element={<EditarProducto />} />
                 <Route exact path="/usuario/login" element={<Login />} />
-                <Route exact path="/usuario/registro" element={<Registro />} />
+                <Route exact path="/usuario/registro" element={<Registro setUsuarioLogueado={setUsuarioLogueado} />} />
             </Routes>
             <Footer />
         </BrowserRouter>
