@@ -18,16 +18,16 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link as={NavLink} to="/">
+                            <Nav.Link end as={NavLink} to="/">
                                 Inicio
                             </Nav.Link>
                             {/* fijate en la propiedad del local storage */}
                             {usuarioLogueado.email ? (
                                 <>
-                                    <NavLink to="/administrar" className={"nav-item nav-link"}>
+                                    <NavLink end to="/administrar" className={"nav-item nav-link"}>
                                         Aministrador
                                     </NavLink>
-                                    <NavLink to="/usuario/registro" className={"nav-item nav-link"}>
+                                    <NavLink end to="/administrar/usuario/registro" className={"nav-item nav-link"}>
                                         Registro
                                     </NavLink>
                                     <Button variant="dark" onClick={logout}>
@@ -35,7 +35,7 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
                                     </Button>
                                 </>
                             ) : (
-                                <NavLink to="/usuario/login" className={"nav-item nav-link"}>
+                                <NavLink end to="/usuario/login" className={"nav-item nav-link"}>
                                     Login
                                 </NavLink>
                             )}
